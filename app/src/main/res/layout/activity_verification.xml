@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_signin">
+
+    <ImageButton
+
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_28dp"
+        android:layout_marginTop="@dimen/distance_48dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="@dimen/distance_10dp"
+        android:paddingVertical="@dimen/distance_5dp"
+        android:src="@drawable/ic_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_first_pin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_40dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+
+        app:layout_constraintEnd_toStartOf="@id/edt_second_pin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_verification_message">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center_horizontal"
+            android:hint="@string/activity_verification_space"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:text="9"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/size_22sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_second_pin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@id/edt_first_pin"
+        app:layout_constraintEnd_toStartOf="@id/edt_third_pin"
+        app:layout_constraintStart_toEndOf="@+id/edt_first_pin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center_horizontal"
+            android:hint="@string/activity_verification_space"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/size_22sp"
+
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_third_pin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@id/edt_first_pin"
+        app:layout_constraintEnd_toStartOf="@id/edt_fourth_pin"
+        app:layout_constraintStart_toEndOf="@+id/edt_second_pin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center_horizontal"
+            android:hint="@string/activity_verification_space"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:textColor="@color/orange"
+
+            android:textSize="@dimen/size_22sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_fourth_pin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@id/edt_first_pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edt_third_pin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center_horizontal"
+            android:hint="@string/activity_verification_space"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/size_22sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_20dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/sofia_pro_semi_bold"
+        android:text="@string/activity_verification_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_36.41sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_no_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20dp"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:lines="2"
+        android:text="@string/activity_verification_dont_receive_code"
+        android:textColor="@color/dove_gray"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_third_pin"
+        app:layout_constraintStart_toStartOf="@+id/edt_first_pin"
+        app:layout_constraintTop_toBottomOf="@+id/edt_first_pin" />
+
+    <TextView
+        android:id="@+id/tv_resend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_5dp"
+        android:layout_marginTop="@dimen/distance_20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:lines="2"
+        android:text="@string/activity_verification_please_resend"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_no_receive"
+        app:layout_constraintTop_toBottomOf="@+id/edt_first_pin" />
+
+    <TextView
+        android:id="@+id/tv_verification_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sofia_pro_regular"
+        android:text="@string/activity_verification_message"
+        android:textColor="@color/manatee"
+        app:layout_constraintStart_toStartOf="@+id/tv_verification"
+        app:layout_constraintTop_toBottomOf="@+id/tv_verification" />
+
+    <ImageView
+        android:id="@+id/background_gray"
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        android:layout_marginBottom="@dimen/distance_4dp"
+        android:src="@color/mischka"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_one_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_five"
+        app:layout_constraintEnd_toStartOf="@+id/btn_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_four"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_four_button"
+
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btn_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_five" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_seven"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_seven_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btn_eight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_five" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_eight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_eight_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+
+        app:layout_constraintEnd_toStartOf="@+id/btn_nine"
+        app:layout_constraintStart_toEndOf="@id/btn_seven"
+        app:layout_constraintTop_toBottomOf="@+id/btn_five" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_zero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_zero_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/btn_remove"
+        app:layout_constraintStart_toStartOf="@+id/btn_eight"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eight" />
+
+    <ImageButton
+        android:id="@+id/btn_remove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/distance_5dp"
+        android:src="@drawable/image_exclude"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_zero"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eight" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_nine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_nine_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_eight"
+        app:layout_constraintTop_toBottomOf="@+id/btn_six" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_five"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_five_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btn_six"
+        app:layout_constraintStart_toEndOf="@id/btn_four"
+        app:layout_constraintTop_toBottomOf="@+id/btn_two" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_six"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_six_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_five"
+        app:layout_constraintTop_toTopOf="@+id/btn_five" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_two_button"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_14sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btn_three"
+        app:layout_constraintStart_toEndOf="@id/btn_one"
+        app:layout_constraintTop_toTopOf="@+id/background_gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/distance_5dp"
+        android:fontFamily="@font/sf_prodisplay_regular"
+        android:text="@string/activity_verification_three_button"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_14sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_two"
+        app:layout_constraintTop_toTopOf="@+id/background_gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
